@@ -32,9 +32,9 @@
 .mapSection h1 {
     font-family: 'TT Travels Bold';
     font-size: clamp(28px, 5vw, 56px);
-    margin: 0;
+    padding-bottom: 10px;
     line-height: 100%;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 .mapSection h1 span {
@@ -42,6 +42,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+    
 }
 
 .headerCont {
@@ -116,7 +117,7 @@
     height: 100%;
     border-radius: 20px;    
     opacity: 1;
-    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.716);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.716);  /* задает затемнение вокруг элемента */
     object-fit: cover;
     object-position: center center;
     transition: all 0.5s linear;
