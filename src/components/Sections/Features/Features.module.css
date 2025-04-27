@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.featuresSection {
+    color: rgba(255, 255, 255, 1);
+    background-color: #faf8f5;
+}
+
+.textContainer h5, 
+.textContainer p {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    padding: 8px 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-self: flex-start;
+}
+
+.textContainer h5 {
+    font-family: 'TT Travels';
+    font-size: clamp(24px, 1.46vw, 28px);
+    display: inline-flex;
+}
+
+.textContainer p {
+    font-family: 'Helvetica Neue Regular';
+    font-size: clamp(18px, 1.1vw, 20px);
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: transparent;
+    margin: 15px;
+}
+
+.picContainer {
+    position: relative;
+    max-width: 580px;
+    transition: all 0.5s linear;
+}
+
+.picContainer img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1180px;
+    margin: 100px auto;
+}
+
+@media (max-width: 600px) {
+    .textContainer {
+        position: static;
+        background-color: transparent;
+        color: rgba(26, 26, 26, 1);
+        margin: 5px;
+    }
+    .textContainer h5, 
+    .textContainer p {
+        background-color: transparent;
+        padding: 0;
+    }
+    .picContainer img {
+        border-radius: 5px;
+    }
+    .featuresSection {
+        padding: 15px;
+    }
+    .container {
+        gap: 50px;
+        margin: 20px auto;
+    }
+}

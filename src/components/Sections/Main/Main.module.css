@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Baloo+Bhaina+2:wght@400..800&family=Bungee+Spice&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Codystar:wght@300;400&family=Doto:wght@100..900&family=Eater&family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Tilt+Warp&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Vidaloka&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainSection {
+    margin: 30px 3.125vw;
+    background-color: #faf8f5;    
+}
+
+.mainSection header {
+    display: flex;
+    justify-content: space-between;
+    width: 100;
+}
+
+.leftHeader {
+    display: flex;
+    flex-direction: row;
+    max-width: 329px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.leftHeader img {
+    width: 8.2vw;
+    height: 1.67vw;
+    min-width: 89px;
+    min-height: 18px;
+}
+
+.leftHeader p {
+    font-size: clamp(10px, 0.73vw, 14px);
+    font-weight: 400;
+    color: rgba(100, 101, 98, 1);
+    font-family: 'Helvetica Neue Thin', sans-serif;
+
+  
+}
+
+/* .rightHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} */
+
+.mobile {
+    display: none;
+}
+
+.rightHeader__number {
+    color: rgba(26, 26, 26, 1);
+    font-size: clamp(14px, 0.83vw, 16px);
+    font-family: 'TT Travels', sans-serif;
+}
+
+.rightHeader__work {
+    font-family: 'Inter';
+    text-align: right;
+    color: rgba(160, 167, 71, 1);
+    font-size: clamp(14px, 0.83vw, 16px);
+    font-weight: 500;
+}
+
+.mainSection hr {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e3dfdc;
+    box-shadow: none;
+}
+
+.mainLogo {
+    width: 11.15vw;
+    min-width: 127px;
+}
+
+.mainSection h1 {
+    font-family: 'TT Travels Bold';
+    font-size: clamp(32px, 3.33vw, 64px);
+    text-align: center;
+    letter-spacing: -3px;
+    line-height: 100%;
+    margin: 20px 1vw;
+    max-width: 1000px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 930px;
+    margin: 50px auto 40px;
+}
+
+.textContainer img {
+    max-width: 214px;
+}
+
+.textWithLine {
+    position: relative;
+}
+
+.textWithLine p {
+    font-family: 'Helvetica Neue Regular', sans-serif;
+    letter-spacing: -1%;
+    font-size: clamp(18px, 1.25vw, 24px);
+    text-align: center;
+    line-height: clamp(24px, 1.46vw, 28px);
+    background-image: url(./images/line.svg);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.textWithLine img {
+    position: absolute;
+    width: 1000px;
+}
+
+.picContainer {
+    position: relative;
+    width: clamp(359px, 93.75vw, 1800px);
+    height: clamp(370px, 42vw, 806px);
+    margin: 0 auto;
+}
+
+.picContainer__award {
+    width: clamp(99px, 11vw, 211px);
+    text-align: center;
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    padding: 0.83vw 0.625vw;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.picContainer__award p {
+    font-family: 'TT Travels';
+    font-size: (12px, 0.83vw, 16px);
+    letter-spacing: -4%;
+    background-color: transparent;
+    white-space: normal;
+
+}
+
+.mainPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 10px;
+}
+
+.awardPic {
+    background-color: transparent;
+    margin-bottom: 10px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.picContainer__queue {
+    font-family: 'TT Travels';
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    background-color: transparent;
+    transform: translateX(-50%);
+}
+
+
+.picContainer__queue div {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    padding: 5px 15px;
+    border-radius: 5px;
+    min-width: 122px;
+}
+
+.picContainer__queue p {
+    background-color: transparent;
+    font-size: (12px, 0.83vw, 16px);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+
+.picContainer__queue span {
+    color: rgba(160, 167, 71, 1);
+    font-size: (12px, 0.83vw, 16px);
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-left: 4px;
+}
+
+
+@media (max-width: 1200px) {
+    .picContainer__award p {
+        font-size: 12px;
+    }
+    .mainSection h1 {
+        max-width: 600px;
+    }
+    .picContainer__queue div {
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 720px) {
+    .picContainer__queue div {
+        font-size: 12px;
+        padding: 4px 10px;
+        width: 140px;
+    }
+    .mainSection {
+        position: relative;
+    }
+    
+    /* .leftHeader p {
+        position: absolute;
+        top: 0px;
+    } */
+
+}
+
+@media (max-width: 435px) {
+    .picContainer__queue {
+        flex-direction: column;
+        gap: 5px;
+        position: absolute;
+        top: 3%;
+        left: 19%;
+        transform: translateX(-50%);
+    }
+    .picContainer__queue div {
+        font-size: 12px;
+        padding: 4px 10px;
+        width: 135px;
+    } 
+    .awardPic {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 5px;
+    }
+    .mainPic {
+        border-radius: 3px;
+    }
+    .mainSection {
+        position: relative;
+        margin: 0;
+    }
+    .leftHeader p {
+        display: block;
+        text-align: center;
+        width: 100vw;
+        background-color: white;
+        padding: 5px;
+        font-size: 8px;
+    }
+     .leftHeader {
+        flex-direction: column-reverse;
+        gap: 0px;
+     }    
+    .leftHeader img {
+        margin-left: 20px;
+    }
+    .rightHeader {
+        display: none;
+    }
+    .mobile {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-top: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .textWithLine p {
+        margin: 0 45px;
+        background-size: 200px;
+        padding-bottom: 5px;
+    }
+    .mainSection h1 {
+        margin: 20px 5vw;
+    }
+}

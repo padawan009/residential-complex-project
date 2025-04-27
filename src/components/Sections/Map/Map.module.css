@@ -1,0 +1,192 @@
+
+.mapSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px;
+    position: relative;
+}
+
+.mapSection h6 {
+    font-family: 'TT Travels';
+    font-size: clamp(10px, 0.83vw, 16px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-wrap: nowrap;
+    padding: 15px;
+}
+
+.mapSection hr {
+    all: unset;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e3dfdc;
+    box-shadow: none;
+    /* margin: 20px; */
+}
+
+.mapSection h1 {
+    font-family: 'TT Travels Bold';
+    font-size: clamp(28px, 5vw, 56px);
+    margin: 0;
+    line-height: 100%;
+    margin-bottom: 0px;
+}
+
+.mapSection h1 span {
+    background-image: url(./images/line.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.headerCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1180px;
+    width: calc(100vw - 30px);
+}
+
+.picContainer {
+    width: clamp(378px, 90vw, 1180px);
+    height: clamp(332px, 33.6vw, 664px);
+}
+
+.picContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mapText {
+    font-family: 'Helvetica Neue Regular';
+    text-align: center;
+    font-size: clamp(18px, 1vw, 20px);
+    max-width: 620px;
+    color: rgba(26, 26, 26, 1);
+    margin: 20px;
+    line-height: 1.2;
+}
+
+.panoramaBtn {
+    display: flex;
+    justify-content: center;
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(18px, 1vw, 20px);
+    color: rgba(119, 56, 68, 1);
+    border: 1px solid rgba(119, 56, 68, 0.2);
+    border-radius: 12px;
+    padding: 12px 20px;
+    gap: 8px;
+    letter-spacing: 1.1;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.panoramaBtn:hover {
+    transform: scale(1.02);
+    color: rgb(194, 86, 106);
+    border: 1px solid rgb(194, 86, 106);
+}
+
+.panoramaPic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;  
+    z-index: 3;  
+    max-width: 1180px;
+    width: calc(100vw - 30px);
+    height: auto;
+    /* overflow: hidden; */
+}
+
+.panoramaPic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;    
+    opacity: 1;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.716);
+    object-fit: cover;
+    object-position: center center;
+    transition: all 0.5s linear;
+}
+
+.panoramaPic img:hover {
+    object-position: 10% 50%;
+    transform: scale(1.03);
+}
+
+.closeBtn {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -50px;
+    right: 10px;
+    text-align: center;
+    color: #e3dfdc;
+    cursor: pointer;
+    line-height: 0;
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(18px, 1vw, 20px);
+    background-color: rgba(119, 56, 68, 1);
+    border: 1px solid #e3dfdc;
+    border-radius: 12px;
+    padding: 15px 22px;
+    transition:  0.3s ease-in-out;
+}
+
+.closeBtn:hover {
+    background-color: rgb(194, 86, 106);
+    border: 1px solid rgb(194, 86, 106);
+}
+
+
+@media (max-width: 1910px) {
+    .picContainer img {
+        object-fit: cover;
+        object-position: 70%;
+    }
+    .mapSection h1 {
+        margin-bottom: 40px;
+    }
+    .picContainer {
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 800px) {
+    .panoramaPic img {
+        width: auto;
+        height: 80vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .mapText {
+        text-align: left;
+        max-width: 320px;
+        align-self: flex-start;
+    }
+    .panoramaBtn {
+        align-self: self-start;
+        margin-left: 20px;
+    }
+    .panoramaPic img {
+        width: auto;
+        height: 100vw;
+    }
+
+}
