@@ -1,0 +1,232 @@
+
+.clusterSection {
+    margin: 150px 0px;
+}
+
+.clusterSection h1 {
+    font-family: 'TT Travels Bold';
+    line-height: 100%;
+    letter-spacing: -3px;
+    font-size: clamp(38px, 5vw, 56px);
+    max-width: 736px;
+    text-align: center;
+    margin-left: 50vw;
+    color: rgba(26, 26, 26, 1);
+}
+
+
+.riverContainer,
+.parkContainer {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* align-items: center; */
+}
+
+.riverContainer,
+.riverContainer h4,
+.river__headerCont,
+.river__mainCont,
+.river__textCont,
+.river__headerCont img,
+.river__textCont p   {
+    background-color: rgba(31, 32, 87, 1);
+}
+
+.parkContainer,
+.parkContainer h4,
+.park__headerCont,
+.park__mainCont,
+.park__textCont,
+.park__headerCont img,
+.park__textCont p {
+    background-color: rgba(160, 167, 71, 1);
+}
+
+.riverContainer h4,
+.parkContainer h4 {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'TT Travels Bold';
+    font-size: clamp(28px, 5vw, 56px);
+}
+
+.river__mainCont,
+.park__mainCont {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.river__mainCont button,
+.park__mainCont button {
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(16px, 1vw, 20px);
+    color: rgba(26, 26, 26, 1);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: none;
+    display: block;
+}
+
+.river__headerCont,
+.park__headerCont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.river__headerCont img,
+.park__headerCont img {
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    max-width: 72px;
+}
+
+.river__textCont,
+.park__textCont {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    /* margin-bottom: 40px; */
+}
+
+.river__textCont p,
+.park__textCont p {
+    font-family: 'Helvetica Neue Regular';
+    font-size: clamp(18px, 1vw, 20px);
+    color: rgba(255, 255, 255, 1);
+    line-height: 26px;
+}
+/* карусель */
+
+.viewSwiper {
+    height: 580px;
+    width: 100vw;
+    position: relative;
+    background-color: transparent;
+}
+
+.viewSlide {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    border-radius: 10px;
+  }
+  
+.viewSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+  
+  }
+
+  /* дизайн навигации (стрелок) */
+
+  .customPrev, 
+  .customNext {
+    background-color: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(24px);
+    color: white;
+    padding: 23px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .customPrev img, 
+  .customNext img {
+    background-color: transparent;
+    width: 20px;
+  }
+  .customPrev {
+    left: 5.1vw;
+  }
+  
+  .customNext {
+    right: 5.1vw;
+  }
+  
+  .customPrev:hover, 
+  .customNext:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+
+@media (max-width: 850px) {
+    .river__headerCont img,
+    .park__headerCont img {
+        max-width: 55px;
+    }
+    .clusterSection h1 {
+        margin-left: 0vw;
+        text-align: center;
+        margin: 40px 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .river__mainCont,
+    .park__mainCont {
+        justify-content: space-between;
+        margin: 0px 4vw 40px;
+    }
+    .river__headerCont img,
+    .park__headerCont img {
+        max-width: 45px;
+    }
+    .river__textCont,
+    .park__textCont {
+        max-width: 270px;
+    }
+    .river__textCont p,
+    .park__textCont p {
+        line-height: 24px;
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width: 550px) {
+    .viewSwiper {
+        max-height: 360px;
+        margin-bottom: 100px;
+      }
+      .customPrev, 
+      .customNext {
+        padding: 12px;
+      }
+    .riverContainer,
+    .parkContainer {
+        max-height: 746px;
+    }
+    
+    .river__headerCont img,
+    .park__headerCont img {
+        max-width: 38px;
+    }
+    .river__mainCont button,
+    .park__mainCont button {
+        position: absolute;
+        bottom: 50px;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+    }
+    
+}
