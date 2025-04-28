@@ -1,4 +1,4 @@
-import React  from 'react'
+import React, { useState }  from 'react'
 import CustomSwiper from './CustomSwiper';
 import Modal from '../../Modals/Modal';
 
@@ -42,12 +42,7 @@ function Clusters() {
             </p>
           </div>
           <button>Посмотреть планировки</button>
-        </div>
-        <Modal 
-        imgSrc={modRiverPic}
-        headerText="Получите подробное описание и цены на свободные планировки в кластере River Line"
-        buttonText="Получить планировки" 
-        backgroundColor="rgba(31, 32, 87, 1)"/>      
+        </div>    
         <CustomSwiper
           images={[river1, river2, river3, river4, river5, river6]}
         />
@@ -73,11 +68,7 @@ function Clusters() {
         imgSrc={modRiverPic}
         headerText="Получите подробное описание и цены на свободные планировки в кластере River Line"
         buttonText="Получить планировки" 
-        backgroundColor="rgba(31, 32, 87, 1)"/>      
-        <CustomSwiper
-          images={[river1, river2, river3, river4, river5, river6]}
-        />
-
+        backgroundColor="rgba(31, 32, 87, 1)"/>    
       <Modal 
         imgSrc={modParkPic}
         headerText="Получите подробное описание и цены на свободные планировки в кластере Park Line"
