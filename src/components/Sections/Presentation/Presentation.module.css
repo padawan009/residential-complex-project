@@ -1,0 +1,275 @@
+
+
+.presentationSection {
+    padding: 0px 20px;
+}
+
+/* форма */ 
+
+.presentForm {
+    max-width: 1250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3vw;
+}
+
+.presentForm hr {
+    margin-bottom: 10px;
+    background-color: rgba(234, 227, 217, 1);
+    margin-right: 95px;
+    height: 1px;
+    border: none; 
+    box-shadow: none;
+}
+
+/* левая сторона формы */
+
+.textContainer {
+    background-color: transparent;
+    padding: 30px 60px;
+    padding-right: 0px;
+}
+
+.textContainer h5 {
+    font-family: 'TT Travels';
+    text-transform: uppercase;
+    color: rgba(119, 56, 68, 1);
+    line-height: 100%;
+    text-align: start;
+    margin-left: 110px;
+    font-size: clamp(14px, 0.83vw, 16px);
+    background-color: transparent;
+    letter-spacing: 2px;
+}
+
+
+.textContainer h1 {
+    font-size: clamp(28px, 2.42vw, 48px);
+    letter-spacing: -1px;
+    font-family: 'TT Travels Bold';
+    color: rgba(26, 26, 26, 1);
+    background-color: transparent;
+    line-height: 100%;
+    margin-top: 20px;
+    /* min-width: 660px; */
+}
+
+.textContainer ul {
+    list-style: none;
+    padding-left: 0;
+    background-color: transparent;
+    margin-bottom: 40px;
+}
+
+.textContainer li {
+    font-family: 'Helvetica Neue Regular';
+    font-size: clamp(18px, 1vw, 20px);
+    color: rgba(26, 26, 26, 1);
+    position: relative;
+    padding-left: 30px;
+    margin: 12px 0px;
+    background-color: transparent;
+}
+
+.textContainer li::before {
+    /* content: '➔';
+    font-size: 16px;     
+    color: rgba(119, 56, 68, 1);     */
+    content: url(./images/icon.png);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .formContainer {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .formContainer div {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .formContainer p {
+    font-family: 'Helvetica Neue Regular';
+    font-size: 12px;
+    background-color: transparent;
+    color: rgba(100, 101, 98, 1);
+    margin: 10px 0px;
+    max-width: 520px;
+  }
+
+  .firstSpan {
+    font-family: 'Helvetica Neue Medium';
+    color: rgba(26, 26, 26, 1);
+    font-size: 16px;
+    background-color: transparent;
+    display: block;
+    line-height: 100%;
+    margin: 12px 0px 8px;
+  }
+
+  .secondSpan {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: rgba(234, 227, 217, 1);
+  }
+
+  .formContainer button {
+    color:rgba(255, 255, 255, 1);
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(18px, 1vw, 20px);
+    background-color: rgba(119, 56, 68, 1);
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: none;
+    transition: all 0.2s linear;
+    width: 327px;
+  }
+
+  .formContainer button:hover {
+    background-color: rgb(194, 86, 106);
+  }
+
+  .formContainer input {
+    background-color: rgba(245, 243, 240, 1);
+    width: 260px;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Helvetica Neue Regular';
+    font-size: 20px;
+  }
+  
+  .formContainer input::placeholder {
+    color: rgba(194, 189, 182, 1);
+  }
+
+  /* правая сторона формы */
+
+  .picContainer {
+    width: clamp(355px, 24vw, 468px);
+    /* width: 468px; */
+    background-color: transparent;
+    position: relative;
+    padding: 0;
+    align-self: flex-end;
+    height: 522px; 
+    background-image: url(./images/bg.png);
+    overflow: hidden;
+    background-position: 30% -0px; 
+    background-size: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+
+  .picContainer img {
+    background-color: transparent;
+    margin: 0 auto;
+    object-fit: none;
+  }
+
+  .picContainer div {
+    background-color: transparent;
+    position: absolute;
+    bottom: 45px;
+    left: 50px;
+    max-width: 147px;
+  }
+
+  .picContainer h6 {
+    background-color: transparent;
+    font-family: 'TT Travels Bold';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 1);
+    letter-spacing: -2%;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+
+  .picContainer p {
+    background-color: transparent;
+    font-family: 'Helvetica Neue Regular';
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    text-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 1);
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+
+  @media (max-width: 1080px) {
+    .presentForm {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .picContainer {
+        align-self: center;
+    }
+    .textContainer {
+        padding: 30px 60px;
+    }
+    .formContainer input {
+        width: 100%;
+    }
+    .formContainer button {
+        width: 100%;
+    }
+    .picContainer div {
+        left: 50px;
+    }
+  }
+
+  @media (max-width: 770px) {
+
+    .formContainer div {
+        flex-direction: column;
+        align-items: start;
+    }
+    .formContainer input {
+        padding: 10px 16px;
+    }
+    .formContainer p {
+        text-align: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .presentForm {
+        max-width: 359px;
+    }
+    .textContainer {
+        padding: 25px 20px;
+    }
+    .textContainer h5 {
+        margin-left: 0px;
+        font-size: 10px;
+    }
+    .firstSpan {
+        display: none;
+    }
+    .picContainer {
+        max-height: 350px;
+        align-items: stretch;
+        align-self: center;
+    }
+    .picContainer img {
+        object-fit: fill;
+        margin: 0 auto;
+    }
+    .picContainer div {
+        left: 80px;
+    }
+}
