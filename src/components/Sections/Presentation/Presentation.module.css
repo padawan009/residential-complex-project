@@ -121,6 +121,7 @@
   }
 
   .secondSpan {
+    background-color: transparent;
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-color: rgba(234, 227, 217, 1);

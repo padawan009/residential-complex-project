@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
 import CustomSwiper from './CustomSwiper';
-import Modal from '../../Modals/Modal';
+import ModalCluster from '../../Modals/ModalCluster';
 
 import riverIcon from "./images/River-Line/Vector.png"
 import parkIcon from "./images/Park-Line/parkline.png"
@@ -75,7 +75,7 @@ function Clusters() {
         />
       </div>
       {openModalType === 'river' && (
-        <Modal 
+        <ModalCluster 
           imgSrc={modRiverPic}
           headerText="Получите подробное описание и цены на свободные планировки в кластере River Line"
           buttonText="Получить планировки"
@@ -85,7 +85,7 @@ function Clusters() {
       )}
 
       {openModalType === 'park' && (
-        <Modal 
+        <ModalCluster 
           imgSrc={modParkPic}
           headerText="Получите подробное описание и цены на свободные планировки в кластере Park Line"
           buttonText="Получить планировки"

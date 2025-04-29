@@ -295,5 +295,6 @@
     }
     .mainSection h1 {
         margin: 20px 5vw;
+        letter-spacing: -1px;
     }
 }

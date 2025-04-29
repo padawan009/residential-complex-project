@@ -1,0 +1,91 @@
+.testSection {
+    padding: 50px 20px;
+}
+
+.testContainer {
+    background-color: rgba(160, 167, 71, 1);
+    border-radius: 12px;
+    max-width: 1180px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.testContainer h2 {
+    background-color: transparent;
+    font-family: 'TT Travels';
+    font-size: clamp(26px, 2.42vw, 48px);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 100%;
+    max-width: 770px;
+    padding: 70px 0px 20px;
+}
+
+.testContainer p {
+    background-color: transparent;
+    color: rgba(231, 233, 211, 1);
+    font-family: 'TT Travels';
+    font-size: clamp(18px, 1.41vw, 28px);
+    max-width: 640px;
+    text-align: center;
+    padding: 0px 35px 50px;
+}
+
+.testContainer button {
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(18px, 1vw, 20px);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(26, 26, 26, 1);
+    border-radius: 12px;
+    padding: 16px 24px;
+    letter-spacing: 0%;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.testContainer button:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: rgba(160, 167, 71, 1);
+}
+
+.picContainer {
+    display: flex;
+    background-color: transparent;
+}
+
+.picContainer img {
+    background-color: transparent;
+    object-fit: contain;
+}
+
+.secondPic {
+    display: block;
+}
+
+@media (max-width: 550px) {
+    .testSection {
+        padding: 0px 10px;
+    }
+    .testContainer p {
+        max-width: 323px;
+        padding: 0px 10px 30px;
+    }
+    .testContainer button {
+        margin-bottom: 40px;
+    }
+
+    .secondPic {
+        display: none;
+
+    }
+    .picContainer {
+        max-height: 100px;
+        object-position: left;
+    }
+
+}

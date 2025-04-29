@@ -12,7 +12,6 @@ import Map from './components/Sections/Map/Map'
 import Presentation from './components/Sections/Presentation/Presentation'
 import Test from './components/Sections/Test/Test'
 import Views from './components/Sections/Views/Views'
-import Modal from './components/Modals/Modal'
 import './styles/App.css'
 import './styles/fonts.css'
 
