@@ -1,12 +1,26 @@
+.modShadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.726); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+  }
+  
+
 .modalContainer {
     display: flex;
     max-width: 775px;
+    height: auto;
     border-radius: 12px;
     justify-content: center;
     /* align-items: center; */
     margin: 100px auto;
     background-color: rgba(255, 255, 255, 1);
-    padding: 0 20px;
 }
 
 .textContainer {
@@ -18,6 +32,7 @@
     width: 100%;
     text-align: center;
     padding: 30px 40px;
+    border-radius: 0px 12px 12px 0px;
 }
 
 .textContainer hr {
@@ -72,7 +87,27 @@
     text-align: start;
 }
 
-.textContainer p {
+/* .textContainer p {
+    color: rgba(100, 101, 98, 1);
+    font-family: 'Helvetica Neue Regular';
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    padding: 10px 0 20px;
+} */
+
+
+.textP {
+    font-family: 'Helvetica Neue Regular';
+    font-size: 20px;
+    color: rgba(100, 101, 98, 1);
+    text-align: center;
+    letter-spacing: 0px;
+    line-height: 120%;
+    padding: 20px 0px 10px;
+  }
+
+.confident {
     color: rgba(100, 101, 98, 1);
     font-family: 'Helvetica Neue Regular';
     font-size: 18px;
@@ -119,3 +154,53 @@
   .picContainer img {
     height: 100%;
   }
+
+
+@media (max-width: 850px) {
+    .modalContainer {
+        flex-direction: column;
+        max-width: 70vw;
+        min-width: 450px;
+    }
+    .formContainer div{
+        align-items: center;
+    }
+    .formContainer input,
+    .formContainer button {
+        width: 53vw;
+        min-width: 340px;
+    }
+    .picContainer,
+    .picContainer img {
+        width: 100%;
+        max-height: 260px;
+        object-fit: contain;
+        object-position: right;
+        border-radius: 12px 12px 0px 0px;
+    }
+    .textContainer {
+        border-radius: 0px 0px 12px 12px;
+    } 
+}
+
+@media (max-width: 480px) {
+    .modalContainer {
+        width: 90vw;
+        min-width: 365px;
+    }
+    .formContainer input,
+    .formContainer button {
+        width: 53vw;
+        min-width: 280px;
+    }
+    .textContainer h5 {
+        font-size: 22px;
+    }
+    .textP {
+        font-size: 16px;
+        padding-top: 10px;
+    }
+    .confident {
+        font-size: 12px;
+    }
+}

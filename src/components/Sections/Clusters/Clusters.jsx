@@ -27,6 +27,16 @@ import 'swiper/css/bundle';
 import styles from "./Clusters.module.css"
 
 function Clusters() {
+  const [openModalType, setOpenModalType] = useState(null);
+
+  function openModal(type) {
+    setOpenModalType(type);
+  }
+
+  function closeModal() {
+    setOpenModalType(null);
+  }
+
   return (
     <section className={styles.clusterSection}>
       <h1>Жилой комплекс состоит из двух кластеров</h1>
@@ -41,7 +51,7 @@ function Clusters() {
               выстроены вдоль реки Раменки
             </p>
           </div>
-          <button>Посмотреть планировки</button>
+          <button onClick={() => openModal('river')}>Посмотреть планировки</button>
         </div>    
         <CustomSwiper
           images={[river1, river2, river3, river4, river5, river6]}
@@ -58,24 +68,32 @@ function Clusters() {
               расположенных вдоль Матвеевского леса
             </p>
           </div>
-          <button>Посмотреть планировки</button>
+          <button onClick={() => openModal('park')}>Посмотреть планировки</button>
         </div>
         <CustomSwiper
           images={[park1, park2, park3, park4, park5, park6]}
         />
       </div>
-      <Modal 
-        imgSrc={modRiverPic}
-        headerText="Получите подробное описание и цены на свободные планировки в кластере River Line"
-        buttonText="Получить планировки" 
-        backgroundColor="rgba(31, 32, 87, 1)"/>    
-      <Modal 
-        imgSrc={modParkPic}
-        headerText="Получите подробное описание и цены на свободные планировки в кластере Park Line"
-        buttonText="Получить планировки" 
-        backgroundColor="rgba(160, 167, 71, 1)"/>      
-    </section>
+      {openModalType === 'river' && (
+        <Modal 
+          imgSrc={modRiverPic}
+          headerText="Получите подробное описание и цены на свободные планировки в кластере River Line"
+          buttonText="Получить планировки"
+          backgroundColor="rgba(31, 32, 87, 1)"
+          closeModal={closeModal}
+        />
+      )}
 
+      {openModalType === 'park' && (
+        <Modal 
+          imgSrc={modParkPic}
+          headerText="Получите подробное описание и цены на свободные планировки в кластере Park Line"
+          buttonText="Получить планировки"
+          backgroundColor="rgba(160, 167, 71, 1)"
+          closeModal={closeModal}
+        />
+      )}
+    </section>
   )
 }
 

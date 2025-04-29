@@ -70,6 +70,20 @@
     border-radius: 12px;
     border: none;
     display: block;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.river__mainCont button:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: rgba(31, 32, 87, 1);
+}
+
+.park__mainCont button:hover {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-color: rgba(160, 167, 71, 1);
 }
 
 .river__headerCont,
