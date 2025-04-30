@@ -1,0 +1,159 @@
+
+
+.intekoSection {
+    max-width: 1180px;
+    height: 760px;
+    background-image: url(./images/inteco1.png);
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 100px auto;
+    padding: 70px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+}
+
+.intekoSection h1 {
+    background-color: transparent;
+    font-family: 'TT Travels Bold';
+    font-size: clamp(28px, 2.42vw, 48px);
+    letter-spacing: -4%;
+    line-height: 100%;
+    margin: 0px;
+}
+
+.textBlock {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    height: 100%;
+}
+
+.textBlock p {
+    font-family: 'Helvetica Neue Regular';
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.textBlock__left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+
+}
+
+.textBlock__leftHeader {
+    margin-bottom: 50px;
+    max-width: 400px !important;
+}
+
+.textBlock__left div {
+    background-color: transparent;
+    max-width: 280px;
+}
+
+.textBlock__left p {
+    background-color: transparent;
+    font-size: clamp(18px, 1vw, 20px);
+}
+
+.textBlock__left h4 {
+    background-color: transparent;
+    font-family: 'TT Travels';
+    font-size: clamp(24px, 1.3vw, 26px);
+}
+
+.textBlock hr {
+    background-color: rgba(234, 227, 217, 0.627);
+    width: 100%;
+    height: 1px;
+    border: none; 
+    box-shadow: none;
+    display: none;
+}
+
+.textBlock__right {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.textBlock__right h6 {
+    background-color: transparent;
+    font-family: 'Helvetica Neue Medium';
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.textBlock__right a {
+    font-family: 'Helvetica Neue Light';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.751);
+    text-decoration-color: rgba(255, 255, 255, 0.482);
+    text-underline-offset: 3px;
+    letter-spacing: 0%;
+    margin: 6px 0px;
+}
+
+.textBlock__right a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 900px) {
+    .textBlock {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    .intekoSection h1 {
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+    }
+    .intekoSection {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .intekoSection {
+        background-image: url(./images/image2.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+        min-height: 892px;
+        background-color: rgba(0, 44, 109, 1);
+        padding: 40px;
+    }
+    .textBlock__leftHeader {
+        margin-bottom: 30px;
+    }
+    .textBlock {
+        height: 70%;
+    }
+    .textBlock hr {
+        display: block;
+    }
+    .textBlock__left p{
+        font-size: 16px;
+        letter-spacing: 6%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .intekoSection {
+        padding: 25px;
+    }
+    .textBlock__left p{
+        font-size: 14px;
+        letter-spacing: 6%;
+    }
+    .textBlock hr {
+        display: block;
+    }
+    .textBlock__leftHeader p {
+        font-size: 16px;
+    }
+}

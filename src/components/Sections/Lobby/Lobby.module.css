@@ -1,6 +1,4 @@
-.lobbySection {
-    
-}
+
 
 .headerBlock img {
     background-color: transparent;
@@ -43,7 +41,6 @@
     font-family: 'TT Travels';
     line-height: 100%;
     font-size: clamp(24px, 2.02vw, 40px);
-
 }
 
 .textBlock {
