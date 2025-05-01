@@ -133,6 +133,9 @@
 }
 
 @media (max-width: 510px) {
+    .flatBlock {
+        height: 614px;
+    }
     .textBlock {
         padding: 20px;
         /* max-height: 330px; */
