@@ -108,12 +108,14 @@
 .telBlock p:first-child {
     font-family: 'Helvetica Neue Regular';
     font-size: clamp(16px, 1.2vw, 24px);
+    background-color: transparent;
 }
 
 .adressBlock p:last-child ,
 .telBlock p:last-child{
     font-family: 'Helvetica Neue Medium';
     font-size: clamp(16px, 1.2vw, 24px);
+    background-color: transparent;
 }
 
 
