@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css"
 
 import React from 'react'
-import mainLogo from "./images/mainlogo.png"
+import mainLogo from "./images/mainLogo.png"
 import estesLogo from "./images/logo.png"
 import map from "./images/map.png"
 
