@@ -82,20 +82,25 @@
     }
     .cardBlock {
         max-width: 70vw;
-        min-height: 500px;
+        min-height: max-content;
         justify-content: space-between;
+        width: 100%;
     }
 
     .cardBlock img {
         min-height: 280px;
+        height: 30vw;
+        width: 100%;
     }
     .cardBlock h5 {
         max-width: 100%;
         text-align: start;
-        padding-top: 0px;
+        padding: 30px 30px 20px;
     }
     .cardBlock p {
-        padding-bottom: 20px;
+        padding: 0px 30px 40px;
+        width: 100%;
+        max-width: 550px;
     }
 }
 
@@ -127,12 +132,10 @@
         justify-content: flex-start;
     }
     .cardBlock p {
-        padding: 10px;
-        padding-right: 50px;
+        padding: 0px 50px 30px 10px;
     }
     .cardBlock h5 {
-        padding-top: 20px;
-        padding-right: 100px;
+        padding: 20px 100px 10px 10px;
     }
     .cardBlock img {
         border-radius: 5px;
