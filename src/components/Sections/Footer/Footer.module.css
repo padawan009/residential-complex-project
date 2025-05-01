@@ -1,0 +1,247 @@
+
+.footerSection {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0px;
+    /* padding-left: 70px;
+    padding-right: 70px; */
+}
+
+.footerSection hr {
+    background-color: rgba(234, 227, 217, 1);
+    height: 1px;
+    border: none; 
+    box-shadow: none;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.mainLine {
+    max-width: 1180px;
+    width: 90vw;
+    align-self: center;
+}
+
+.footerContainer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerBlock {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerBlock {
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 60px 70px 0px;
+}
+
+.headerBlock h2 {
+    background-color: transparent;
+    font-family: 'TT Travels';
+    font-size: clamp(24px, 1.8vw, 36px);
+    color: rgba(26, 26, 26, 1);
+    letter-spacing: -1px;
+    max-width: 645px;
+    line-height: 40px;
+}
+
+.headerBlock img {
+    background-color: transparent;
+}
+
+.footerBlock {
+    background-color: transparent;
+    display: flex;
+    max-height: 421px;
+    padding-left: 0px;
+}
+
+.footerBlock div {
+    background-color: transparent;
+}
+
+.textBlock {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    margin-left: 70px;
+}
+
+.textBlock img {
+    background-color: transparent;
+    object-fit: contain;
+    max-height: 40px;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.adressBlock {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.adressBlock p {
+    background-color: transparent;
+}
+
+.adressBlock p:last-child {
+    width: 350px;
+    justify-content: flex-start;
+}
+
+.adressBlock p:first-child,
+.telBlock p:first-child {
+    font-family: 'Helvetica Neue Regular';
+    font-size: clamp(16px, 1.2vw, 24px);
+}
+
+.adressBlock p:last-child ,
+.telBlock p:last-child{
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(16px, 1.2vw, 24px);
+}
+
+
+.telBlock {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.telBlock p {
+    background-color: transparent;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.telBlock div {
+    display: flex;
+    width: 350px;
+    justify-content: flex-start;
+}
+
+.telBlock span {
+    color: rgba(160, 167, 71, 1);
+    font-family: 'Helvetica Neue Medium';
+    font-size: clamp(14px, 0.9vw, 16px);
+    display: inline;
+    background-color: transparent;
+    align-self: flex-start;
+}
+
+.picDiv {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 51vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.map {
+    background-color: transparent;
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .footerBlock {
+        flex-direction: column;
+        max-height: fit-content;
+        gap: 30px;
+    }
+    .picDiv {
+        min-height: 360px;
+        max-width: 100vw;
+    }
+    .headerBlock {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 40px 50px 0px;
+    }
+    .headerBlock h2 {
+        letter-spacing: -2%;
+        line-height: 30px;
+    }
+    .headerBlock img {
+        padding-bottom: 10px;
+    }
+    .textBlock {
+        margin-left: 50px;
+        width: 520px;
+    }
+    .textBlock img {
+        max-height: 5vw;
+        margin-top: 20px;
+        min-height: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .textBlock {
+        width: 100vw;
+        margin: 0 0px;
+        padding: 0 20px;
+    }
+    .adressBlock p:last-child {
+        width: 215px;
+    }
+    .adressBlock p:first-child {
+        text-wrap: nowrap;
+    }
+    .telBlock {
+        gap: 50px;
+    }
+    .telBlock div {
+        width: 215px;
+    }
+    .headerBlock  {
+        padding: 40px 20px 0px;
+    }
+    .headerBlock img {
+        height: 6vw;
+        min-height: 30px;
+    }
+    .headerBlock h2 {
+        line-height: 26px;
+        max-width: 70vw;
+        min-width: 265px;
+    }
+    .telBlock div {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .telBlock div p {
+        text-decoration: underline;
+        text-decoration-color: rgba(160, 167, 71, 1);
+        text-underline-offset: 2px;
+        text-decoration-thickness: 0.5px;
+        text-wrap: nowrap;
+    }
+    .adressBlock {
+        gap: 20px;
+    }
+    .telBlock div {
+        gap: 5px;   
+    }
+
+}

@@ -1,0 +1,140 @@
+.decorSection {
+    padding: 0px 20px;
+    padding-bottom: 60px;
+}
+
+.decorSection h1 {
+    text-align: center;
+    font-family: 'TT Travels Bold';
+    line-height: 100%;
+    letter-spacing: -3px;
+    font-size: clamp(28px, 5vw, 56px);
+    /* max-width: 736px; */
+    color: rgba(26, 26, 26, 1);
+    margin: 20px auto;
+}
+
+.decorSection h4 {
+    text-align: center;
+    font-family: 'Helvetica Neue Regular';
+    font-size: clamp(18px, 1.2vw, 24px);
+    line-height: clamp(24px, 1.4vw, 28px);
+    letter-spacing: -1%;
+    background-image: url(./images/line.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    max-width: fit-content;
+    margin: 0 auto 50px;
+    padding-bottom: 10px;
+}
+
+.cardsContainer {
+    display: flex;
+    max-width: 1180px;
+    height: 470px;
+    align-items: center;
+    margin: 60px auto;
+    gap: 20px;
+}
+
+.cardBlock {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    min-width: 360px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.cardBlock h5 {
+    background-color: transparent;
+    font-family: 'TT Travels';
+    font-size: clamp(24px, 1.4vw, 28px);
+    line-height: clamp(26px, 1.6vw, 32px);
+    text-align: start;
+    padding: 20px 10px;
+    max-width: 290px;
+}
+
+.cardBlock p {
+    background-color: transparent;
+    font-family: 'Helvetica Neue Regular';
+    font-size: clamp(18px, 1vw, 20px);
+    color: rgba(26, 26, 26, 1);
+    line-height: clamp(24px, 1.6vw, 30px);
+    padding: 0px 15px 0px 10px;
+}
+
+.cardBlock img {
+    background-color: transparent;
+    object-fit: cover;
+    height: 222px;
+    border-radius: 12px;
+}
+
+@media (max-width: 1200px) {
+    .cardsContainer {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .cardBlock {
+        max-width: 70vw;
+        min-height: 500px;
+        justify-content: space-between;
+    }
+
+    .cardBlock img {
+        min-height: 280px;
+    }
+    .cardBlock h5 {
+        max-width: 100%;
+        text-align: start;
+        padding-top: 0px;
+    }
+    .cardBlock p {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .decorSection h4 {
+        background-image: none;
+        padding: 0px 90px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .decorSection {
+        padding: 30px 10px 3px;
+    }
+    .decorSection h1 {
+        text-align: left;
+        padding-left: 10px;
+        max-width: 320px;
+        margin: 0px 0px 10px;
+        letter-spacing: -1px;
+    }
+    .decorSection h4 {
+        text-align: left;
+        padding: 0px 10px;
+    }
+    .cardBlock {
+        max-width: 100vw;
+        justify-content: flex-start;
+    }
+    .cardBlock p {
+        padding: 10px;
+        padding-right: 50px;
+    }
+    .cardBlock h5 {
+        padding-top: 20px;
+        padding-right: 100px;
+    }
+    .cardBlock img {
+        border-radius: 5px;
+    }
+}
