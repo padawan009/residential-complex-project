@@ -16,7 +16,7 @@ function Presentation() {
             <li>Прогуляетесь по благоустроенной набережной</li>
           </ul>
           <hr />
-          <form className={styles.formContainer} action="">
+          <form className={styles.formContainer} onSubmit={(e) => e.preventDefault()}>
             <span className={styles.firstSpan}>Закрепить за номером</span>
             <div>
               <input type="tel"

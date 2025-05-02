@@ -1,75 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Test from "../Test";
 import styles from "./TestCheckbox.module.css";
 
-import flatPic from "./images/img.png";
-import pentPic from "./images/img (1).png";
-
-import plan1 from "./images/image 216.png";
-import plan2 from "./images/image 217.png";
-import plan3 from "./images/image 218.png";
-
-import square1 from "./images/2.png";
-import square2 from "./images/3.png";
-import square3 from "./images/31221.png";
-
-import whatsup from "./images/telegram.png";
-import telega from "./images/telegram (1).png";
-import viber from "./images/telegram (2).png";
+import { tests } from "./testData"; // файл с массивом данных и импортами картинок
 
 function TestCheckbox() {
-  const tests = [
-    {
-      type: "multi",
-      header: "Какая недвижимость вас интересует?",
-      options: [
-        { id: "flat", label: "Квартиры", img: flatPic },
-        { id: "penthouse", label: "Пентхаусы", img: pentPic },
-      ],
-    },
-    {
-      type: "multi",
-      box: "3",
-      header: "Какая планировка вам подходит?",
-      options: [
-        { id: "plan1", label: "Студия", img: plan1 },
-        { id: "plan2", label: "1-2 спальни", img: plan2 },
-        { id: "plan3", label: "3-4 спальни", img: plan3 },
-      ],
-    },
-    {
-      type: "multi",
-      box: "3",
-      header: "Какую площадь объекта вы рассматриваете?",
-      options: [
-        { id: "square1", label: "26 м² - 100 м²", img: square1 },
-        { id: "square2", label: "100 м² - 150 м²", img: square2 },
-        { id: "square3", label: "150 м² - 192 м²", img: square3 },
-      ],
-    },
-    {
-      type: "withoutBtn",
-      header: "Планируете ли вы использовать подземный паркинг?",
-      options: [
-        { id: "yes", label: "Да, планирую" },
-        { id: "no", label: "Не планирую" },
-      ],
-    },
-    {
-      type: "withInput",
-      header:
-        "Подобрали 4 варианта недвижимости по вашим параметрам. Куда их прислать?",
-      options: [
-        { id: "whats", label: "в Вотсап", img: whatsup },
-        { id: "telega", label: "в Телеграм", img: telega },
-        { id: "viber", label: "в Вайбер", img: viber },
-      ],
-    },
-  ];
-
-  const [test, setTest] = useState(0); // устанавливает номер теста
-  const [isFinal, setIsFinal] = useState(false);
+  const [test, setTest] = useState(0); // для индексов массива тестов
+  const [isFinal, setIsFinal] = useState(false); // для отображения финальной картинки
+  const [showTestComp, setShowTestComp] = useState(false); // для отображения Test.sx
+  const [selectedOptions, setSelectedOptions] = useState([]); // массив выбранных опций
 
   const currentTest = tests[test]; // для отображения текущего теста
+
+  useEffect(() => {
+    if (isFinal) {
+      setTimeout(() => {
+        setShowTestComp(true);
+      }, 3000);
+    }
+  }, [isFinal]);
 
   function handleNext() {
     if (selectedOptions.length === 0) return;
@@ -81,14 +30,16 @@ function TestCheckbox() {
     if (test > 0) setTest((prev) => prev - 1);
   }
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
-
   function toggleCard(id) {
     setSelectedOptions((prevlist) =>
       prevlist.includes(id)
         ? prevlist.filter((index) => index !== id)
         : [...prevlist, id]
     );
+  }
+
+  if (showTestComp) {
+    return <Test />;
   }
 
   if (isFinal) {
@@ -104,7 +55,12 @@ function TestCheckbox() {
       <button className={styles.backBtn} onClick={handleBack}>
         &#8592; Назад
       </button>
-      <div>Pagination</div>
+      <div className={styles.paginationContainer}>
+        <span className={`${styles.line} ${test >= 0 ? styles.activeLine : ""}`}></span>
+        <span className={`${styles.line} ${test >= 1 ? styles.activeLine : ""}`}></span>
+        <span className={`${styles.line} ${test >= 2 ? styles.activeLine : ""}`}></span>
+        <span className={`${styles.line} ${test >= 3 ? styles.activeLine : ""}`}></span>
+      </div>
       <h1>{currentTest.header}</h1>
 
       {currentTest.type === "multi" && (
@@ -171,11 +127,20 @@ function TestCheckbox() {
               if (selectedOptions.length > 0) setIsFinal(true);
             }}
           >
-            <input type="tel" required placeholder="+7 ___-___-__-__" />
+            <input
+              type="tel"
+              required
+              placeholder="+7 ___-___-__-__"
+              maxLength="11"
+            />
             <button className={styles.nextBtn} type="submit">
               Получить варианты
             </button>
           </form>
+          <p className={styles.confident}>
+            Нажимая на кнопку, вы даёте согласие на обработку персональных
+            данных и соглашаетесь с <span>политикой конфиденциальности</span>
+          </p>
         </>
       )}
     </div>
