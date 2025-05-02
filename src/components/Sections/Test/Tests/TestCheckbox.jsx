@@ -3,6 +3,9 @@ import Test from "../Test";
 import styles from "./TestCheckbox.module.css";
 
 import { tests } from "./testData"; // файл с массивом данных и импортами картинок
+import MultiTest from "./MultiTest";
+import ParkingTest from "./ParkingTest";
+import ConnectTest from "./ConnectTest";
 
 function TestCheckbox() {
   const [test, setTest] = useState(0); // для индексов массива тестов
@@ -16,7 +19,7 @@ function TestCheckbox() {
     if (isFinal) {
       setTimeout(() => {
         setShowTestComp(true);
-      }, 3000);
+      }, 2000);
     }
   }, [isFinal]);
 
@@ -64,87 +67,31 @@ function TestCheckbox() {
       <h1>{currentTest.header}</h1>
 
       {currentTest.type === "multi" && (
-        <>
-          <div className={styles.cardsContainer}>
-            {currentTest.options.map((option) => (
-              <label
-                className={`${styles.card} ${
-                  currentTest.box === "3" ? styles.extraStyle : ""
-                }`}
-              >
-                <div className={styles.picBlock}>
-                  <img src={option.img} alt={option.label} />
-                  <input
-                    type="checkbox"
-                    id={option.id}
-                    onChange={() => toggleCard(option.id)}
-                    checked={selectedOptions.includes(option.id)}
-                  />
-                </div>
-                <p>{option.label}</p>
-              </label>
-            ))}
-          </div>
-          <button className={styles.nextBtn} onClick={handleNext}>
-            Дальше
-          </button>
-        </>
+        < MultiTest 
+        currentTest={currentTest}
+        toggleCard={toggleCard}
+        selectedOptions={selectedOptions}
+        handleNext={handleNext}
+        />
       )}
 
-      {currentTest.type === "withoutBtn" && (
-        <div className={styles.cardsContainer}>
-          {currentTest.options.map((option) => (
-            <label
-              className={styles.cardParking}
-              onClick={() => setTest((prev) => prev + 1)}
-            >
-              <p>{option.label}</p>
-            </label>
-          ))}
-        </div>
+      {currentTest.type === "parking" && (
+        <ParkingTest 
+        currentTest={currentTest}
+        setTest={setTest} 
+        />
       )}
 
-      {currentTest.type === "withInput" && (
-        <>
-          <div className={styles.cardsContainer}>
-            {currentTest.options.map((option) => (
-              <label className={styles.cardConnect}>
-                <img src={option.img} alt={option.label} />
-                <p>{option.label}</p>
-                <input
-                  type="checkbox"
-                  id={option.id}
-                  onChange={() => toggleCard(option.id)}
-                  checked={selectedOptions.includes(option.id)}
-                />
-              </label>
-            ))}
-          </div>
-          <form
-            className={styles.cardConnectFooter}
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (selectedOptions.length > 0) setIsFinal(true);
-            }}
-          >
-            <input
-              type="tel"
-              required
-              placeholder="+7 ___-___-__-__"
-              maxLength="11"
-            />
-            <button className={styles.nextBtn} type="submit">
-              Получить варианты
-            </button>
-          </form>
-          <p className={styles.confident}>
-            Нажимая на кнопку, вы даёте согласие на обработку персональных
-            данных и соглашаетесь с <span>политикой конфиденциальности</span>
-          </p>
-        </>
+      {currentTest.type === "connection" && (
+        <ConnectTest 
+        currentTest={currentTest}
+        toggleCard={toggleCard}
+        selectedOptions={selectedOptions}
+        setIsFinal={setIsFinal} 
+        />
       )}
     </div>
-  );
+  )
 }
 
 export default TestCheckbox;

@@ -43,7 +43,7 @@ export const tests = [
       ],
     },
     {
-      type: "withoutBtn",
+      type: "parking",
       header: "Планируете ли вы использовать подземный паркинг?",
       options: [
         { id: "yes", label: "Да, планирую" },
@@ -51,7 +51,7 @@ export const tests = [
       ],
     },
     {
-      type: "withInput",
+      type: "connection",
       header:
         "Подобрали 4 варианта недвижимости по вашим параметрам. Куда их прислать?",
       options: [
