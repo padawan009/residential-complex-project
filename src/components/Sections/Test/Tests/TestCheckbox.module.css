@@ -1,0 +1,325 @@
+.testContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(160, 167, 71, 1);
+    border-radius: 12px;
+    max-width: 1180px;
+    /* min-height: 546px; */
+    margin: 80px auto;
+    padding: 30px;
+    position: relative;
+}
+
+.testContainer h1 {
+    font-family: 'TT Travels';
+    font-size: clamp(24px, 1.8vw, 36px);
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    text-align: center;
+    max-width: 774px;
+    text-align: center;
+}
+
+.cardsContainer {
+    background-color: transparent;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.backBtn {
+    font-family: 'Helvetica Neue Medium';
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.24);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: clamp(16px, 1vw, 20px);
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: all 0.2s;
+}
+
+.backBtn:hover {
+    background-color: rgba(0, 0, 0, 0.481);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 250px
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card p {
+    font-family: 'TT Travels Bold';
+    font-size: 18px;
+    letter-spacing: -2%;
+    line-height: 22px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.picBlock {
+    background-color: transparent;
+    position: relative;
+}
+
+.picBlock img {
+    border-radius: 5px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.picBlock input {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(240, 236, 230, 1);
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.picBlock input:checked {
+    background-color: rgba(160, 167, 71, 1);
+}
+
+.picBlock input:checked::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 4px;
+    width: 4px;
+    height: 10px;
+    border: solid white; /* Цвет галочки */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.nextBtn {
+    font-family: 'Helvetica Neue Medium';
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(26, 26, 26, 1);
+    border: none;
+    border-radius: 12px;
+    padding: 16px 40px;
+    font-size: clamp(16px, 1vw, 20px);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nextBtn:hover {
+    color: rgba(255, 255, 255, 0.525);
+}
+
+
+/* доп стиль для 3 карточек */
+
+.extraStyle div img{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.extraStyle div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px
+}
+
+/* стиль для карточек паркинга */
+
+.cardParking {
+    font-family: 'TT Travels Bold';
+    font-size: clamp(18px, 1.2vw, 24px);
+    letter-spacing: -2%;
+    line-height: 24px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 381px;
+    height: 224px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+}
+
+.cardParking p {
+    background-color: transparent;
+}
+
+.cardParking:hover {
+    transform: scale(1.03);
+}
+
+/* стили для карточек связи */
+
+.cardConnectFooter {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 774px;
+}
+
+.cardConnect {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.cardConnect:hover {
+    transform: scale(1.03);
+    background-color: rgba(0, 0, 0, 0.497);
+}
+
+.cardConnect img {
+    background-color: transparent;
+}
+
+.cardConnect input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardConnect input:checked {
+    background-color: rgba(160, 167, 71, 1);
+}
+
+.cardConnect input:checked::after {
+    content: '✓';
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(160, 167, 71, 1);
+
+}
+
+.cardConnect p {
+    background-color: transparent;
+    font-family: 'TT Travels Bold';
+    font-size: 18px;
+    letter-spacing: -2%;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 1);
+    padding-top: 10px;
+}
+
+.cardConnectFooter input {
+    background-color: rgba(245, 243, 240, 1);
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Helvetica Neue Regular';
+    font-size: 20px;
+    height: 52px;
+}
+
+.cardConnectFooter button {
+    width: 100%;
+    height: 52px;
+}
+
+.finalHeader {
+    margin: auto;
+    font-size: clamp(36px, 2.6vw, 52px) !important;
+}
+
+@media (max-width: 900px) {
+    .cardsContainer {
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+    .extraStyle div {
+        width: 320px;
+        height: 186px;
+    }
+    .cardConnect {
+        width: 80vw;
+        height: max-content;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .cardConnect p {
+        margin-right: auto;
+    }
+    .cardConnect img {
+        width: 32px;
+        height: 32px;
+    }
+    .cardConnectFooter {
+        flex-direction: column;
+        min-width: 80vw;
+    }
+    .cardConnect input {
+        position: static;
+ 
+    }
+}
+
+@media (max-width: 480px) {
+    .testContainer h1 {
+        text-align: left;
+        margin: 30px 0px 0px;
+    }
+    .extraStyle div {
+        width: 80vw;       
+    }
+    .cardParking {
+        width: 80vw;
+    }
+    .finalHeader {
+        text-align: center !important;
+        margin: auto !important;
+    }
+    .cardsContainer  {
+        gap: 10px;
+    }
+}
