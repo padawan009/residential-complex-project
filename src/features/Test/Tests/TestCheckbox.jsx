@@ -10,7 +10,7 @@ import ConnectTest from "./ConnectTest";
 function TestCheckbox() {
   const [test, setTest] = useState(0); // для индексов массива тестов
   const [isFinal, setIsFinal] = useState(false); // для отображения финальной картинки
-  const [showTestComp, setShowTestComp] = useState(false); // для отображения Test.sx
+  const [showTestComp, setShowTestComp] = useState(false); // для отображения Test.jsx
   const [selectedOptions, setSelectedOptions] = useState([]); // массив выбранных опций
 
   const currentTest = tests[test]; // для отображения текущего теста

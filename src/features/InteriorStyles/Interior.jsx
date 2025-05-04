@@ -1,7 +1,7 @@
 import styles from "./Interior.module.css"
 
 import React, { useState } from 'react'
-import ModalCluster from "../../Modals/ModalCluster"
+import ModalCluster from "../../components/ui/ModalCluster"
 
 import light1 from "./images/Light-flat/Light_1.png"
 import light2 from "./images/Light-flat/Light_2.png"

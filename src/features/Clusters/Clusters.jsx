@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
 import CustomSwiper from './CustomSwiper';
-import ModalCluster from '../../Modals/ModalCluster';
+import ModalCluster from '../../components/ui/ModalCluster'
 
 import riverIcon from "./images/River-Line/Vector.png"
 import parkIcon from "./images/Park-Line/parkline.png"

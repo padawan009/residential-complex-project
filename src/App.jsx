@@ -1,19 +1,19 @@
-import Banks from './components/Sections/Banks/Banks'
-import Clusters from './components/Sections/Clusters/Clusters'
-import Decoration from './components/Sections/Decoration/Decoration'
-import Features from './components/Sections/Features/Features'
-import Flats from './components/Sections/Flats/Flats'
-import Footer from './components/Sections/Footer/Footer'
-import Inteko from './components/Sections/Inteko/Inteko'
-import Interior from './components/Sections/Interior-styles/Interior'
-import Lobby from './components/Sections/Lobby/Lobby'
-import Main from './components/Sections/Main/Main'
-import Map from './components/Sections/Map/Map'
-import Presentation from './components/Sections/Presentation/Presentation'
-import Test from './components/Sections/Test/Test'
-import Views from './components/Sections/Views/Views'
-import './styles/App.css'
-import './styles/fonts.css'
+import Banks from './features/Banks/Banks'
+import Clusters from './features/Clusters/Clusters'
+import Decoration from './features/Decoration/Decoration'
+import Features from './features/Features/Features'
+import Flats from './features/Flats/Flats'
+import Footer from './components/layout/Footer/Footer'
+import Inteko from './features/Inteko/Inteko'
+import Interior from './features/InteriorStyles/Interior'
+import Lobby from './features/Lobby/Lobby'
+import Main from './features/Main/Main'
+import Map from './features/Map/Map'
+import Presentation from './features/Presentation/Presentation'
+import Test from './features/Test/Test'
+import Views from './features/Views/Views'
+import './assets/styles/App.css'
+import './assets/styles/fonts.css'
 
 function App() {
   return (
@@ -32,7 +32,6 @@ function App() {
     <Inteko />
     <Banks />
     <Footer />
-
     </>
   )
 }

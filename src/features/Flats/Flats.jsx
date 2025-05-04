@@ -5,7 +5,7 @@ import flat1 from "./images/img.png"
 import flat2 from "./images/img (1).png"
 import flat3 from "./images/img (2).png"
 import flat4 from "./images/img (3).png"
-import ModalFlat from "../../Modals/ModalFlat"
+import ModalFlat from "../../components/ui/ModalFlat"
 
 
 function Flats() {
